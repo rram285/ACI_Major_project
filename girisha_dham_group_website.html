@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girisha Dham Group | Real Estate</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Girisha Dham Group - Your Trusted Real Estate Partner in Jaipur. Invest safely in JDA & RERA approved projects.">
+    <meta name="keywords" content="GD Group, Real Estate, Jaipur, Plots in Jaipur, JDA Approved, RERA Approved">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration & Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gd: {
+                            blue: '#0f172a', // Dark slate/blue
+                            yellow: '#facc15', // Vibrant yellow
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        /* Image hover zoom effect */
+        .img-hover-zoom {
+            overflow: hidden;
+        }
+        .img-hover-zoom img {
+            transition: transform 0.5s ease;
+        }
+        .img-hover-zoom:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-gd-yellow selection:text-gd-blue">
+
+    <!-- Top Bar -->
+    <div class="bg-gd-blue text-white text-xs sm:text-sm py-2 px-4 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-phone text-gd-yellow"></i>
+                <a href="tel:+917732888555" class="hover:text-gd-yellow transition-colors font-medium">+91-7732888555</a>
+            </div>
+            <div class="text-slate-300">
+                Welcome to GD Group – Your Trusted Real Estate Partner • Invest Safely in JDA & RERA Approved Projects
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex flex-col items-center">
+                        <div class="text-3xl font-bold text-gd-blue tracking-tighter flex items-center">
+                            <i class="fa-solid fa-house-chimney text-gd-blue mr-1"></i>
+                            G<span class="text-gd-yellow">D</span>
+                        </div>
+                        <span class="text-[0.6rem] font-semibold text-slate-500 uppercase tracking-widest mt-0.5">Girisha Dham Group</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-slate-700 hover:text-gd-blue font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-slate-700 hover:text-gd-blue font-medium transition-colors">About</a>
+                    <a href="#projects" class="text-slate-700 hover:text-gd-blue font-medium transition-colors">Projects</a>
+                    <a href="#team" class="text-slate-700 hover:text-gd-blue font-medium transition-colors">Our Team</a>
+                    <a href="#blog" class="text-slate-700 hover:text-gd-blue font-medium transition-colors">Blog</a>
+                    <a href="#contact" class="text-slate-700 hover:text-gd-blue font-medium transition-colors">Contact</a>
+                    <a href="#contact" class="bg-gd-yellow text-gd-blue px-6 py-2.5 rounded-full font-bold shadow-md hover:bg-yellow-500 hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                        Book Now
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-gd-blue focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col">
+                <a href="#home" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-gd-blue hover:bg-slate-50 rounded-md">Home</a>
+                <a href="#about" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-gd-blue hover:bg-slate-50 rounded-md">About</a>
+                <a href="#projects" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-gd-blue hover:bg-slate-50 rounded-md">Projects</a>
+                <a href="#team" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-gd-blue hover:bg-slate-50 rounded-md">Our Team</a>
+                <a href="#blog" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-gd-blue hover:bg-slate-50 rounded-md">Blog</a>
+                <a href="#contact" class="mobile-link block px-3 py-3 text-base font-medium text-slate-700 hover:text-gd-blue hover:bg-slate-50 rounded-md">Contact</a>
+                <a href="#contact" class="mobile-link block mt-4 px-3 py-3 text-center text-base font-bold bg-gd-yellow text-gd-blue rounded-lg shadow-sm">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80" alt="Premium Real Estate" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/50"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-gd-yellow/20 text-gd-yellow border border-gd-yellow/50 text-sm font-semibold mb-6 tracking-wide uppercase">
+                Premium Real Estate Investments
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                Building Trust, <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gd-yellow to-yellow-200">Securing Your Future</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto font-light">
+                Discover prime residential plots in Jaipur. We focus exclusively on JDA approved & RERA registered projects for safe and future-proof investments.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projects" class="px-8 py-3.5 bg-gd-yellow text-gd-blue font-bold rounded-full hover:bg-yellow-500 transition-all shadow-[0_0_15px_rgba(250,204,21,0.4)]">
+                    Explore Projects
+                </a>
+                <a href="#contact" class="px-8 py-3.5 bg-white/10 text-white font-semibold rounded-full border border-white/30 hover:bg-white/20 backdrop-blur-sm transition-all">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gd-blue mb-4">About <span class="text-gd-yellow">Girisha Dham Group</span></h2>
+                <div class="h-1 w-20 bg-gd-yellow mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">Building trust in real estate since 2025</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Our Story Card -->
+                <div class="bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-slate-100">
+                    <h3 class="text-2xl font-bold text-gd-blue mb-6 flex items-center">
+                        <i class="fa-solid fa-book-open text-gd-yellow mr-3"></i> Our Story
+                    </h3>
+                    <div class="space-y-4 text-slate-600 leading-relaxed">
+                        <p>
+                            Established in <strong>2025</strong>, Girisha Dham Group has emerged as a trusted real estate brand in Jaipur, offering premium residential plots that meet the highest standards of legality and planning.
+                        </p>
+                        <p>
+                            We focus exclusively on <span class="font-semibold text-gd-blue">JDA approved & RERA registered</span> projects, ensuring that every investment made with us is safe, secure, and future-proof.
+                        </p>
+                        <p>
+                            Our vision is to simplify real estate investment and build long-term value for families and investors alike, eliminating the stress of traditional property buying.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Founder Card -->
+                <div class="bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center justify-center text-center">
+                    <div class="w-24 h-24 bg-gd-yellow/20 rounded-full flex items-center justify-center mb-6 border-2 border-gd-yellow shadow-inner">
+                        <i class="fa-solid fa-user-tie text-4xl text-gd-blue"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-2">Founder & Visionary</span>
+                    <h3 class="text-3xl font-bold text-gd-blue mb-4">Mr. Saurabh Yadav</h3>
+                    <p class="text-slate-600 italic">
+                        "Guided by integrity, transparency and customer trust, the leadership ensures every project reflects quality, compliance and long-term growth."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gd-blue mb-4">Our <span class="text-gd-yellow">Premium Projects</span></h2>
+                <div class="h-1 w-20 bg-gd-yellow mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">JDA & RERA Approved Residential Plots at Prime Locations of Jaipur</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group flex flex-col h-full hover:shadow-2xl transition-shadow duration-300">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ganesh Vihar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-md text-xs font-bold text-gd-blue shadow">
+                            <i class="fa-solid fa-check-circle text-green-500 mr-1"></i> JDA & RERA
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gd-blue mb-2">Ganesh Vihar 1st <br><span class="text-base text-slate-500 font-medium">(A & B Block)</span></h3>
+                        <p class="text-slate-500 text-sm mb-4 flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-2 text-gd-yellow"></i>
+                            Chakshu, Jaipur
+                        </p>
+                        <div class="mt-auto">
+                            <div class="inline-block bg-gd-yellow px-4 py-2 rounded-lg font-bold text-gd-blue shadow-sm mb-5">
+                                ₹15,500 / guz
+                            </div>
+                            <button class="w-full bg-gd-blue text-white py-3 rounded-xl font-semibold hover:bg-slate-800 transition-colors flex justify-center items-center gap-2">
+                                More Details <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group flex flex-col h-full hover:shadow-2xl transition-shadow duration-300">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="RLB Pride" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-md text-xs font-bold text-gd-blue shadow">
+                            <i class="fa-solid fa-check-circle text-green-500 mr-1"></i> JDA & RERA
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gd-blue mb-2">RLB Pride</h3>
+                        <p class="text-slate-500 text-sm mb-4 flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-2 text-gd-yellow"></i>
+                            Harsuliya, Jaipur
+                        </p>
+                        <div class="mt-auto">
+                            <div class="inline-block bg-gd-yellow px-4 py-2 rounded-lg font-bold text-gd-blue shadow-sm mb-5">
+                                ₹13,900 / guz
+                            </div>
+                            <button class="w-full bg-gd-blue text-white py-3 rounded-xl font-semibold hover:bg-slate-800 transition-colors flex justify-center items-center gap-2">
+                                More Details <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group flex flex-col h-full hover:shadow-2xl transition-shadow duration-300">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ganesh Vihar Vistar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-md text-xs font-bold text-gd-blue shadow">
+                            <i class="fa-solid fa-check-circle text-green-500 mr-1"></i> Premium
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gd-blue mb-2">Ganesh Vihar Vistar</h3>
+                        <p class="text-slate-500 text-sm mb-4 flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-2 text-gd-yellow"></i>
+                            Before Shivdashpura Toll, Jaipur
+                        </p>
+                        <div class="mt-auto">
+                            <div class="inline-block bg-gd-yellow px-4 py-2 rounded-lg font-bold text-gd-blue shadow-sm mb-5">
+                                ₹36,950 / guz
+                            </div>
+                            <button class="w-full bg-gd-blue text-white py-3 rounded-xl font-semibold hover:bg-slate-800 transition-colors flex justify-center items-center gap-2">
+                                More Details <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 group flex flex-col h-full hover:shadow-2xl transition-shadow duration-300">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1605276374104-a628b165fa24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="IS Pride City II" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-md text-xs font-bold text-gd-blue shadow">
+                            <i class="fa-solid fa-check-circle text-green-500 mr-1"></i> JDA & RERA
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gd-blue mb-2">IS Pride City II</h3>
+                        <p class="text-slate-500 text-sm mb-4 flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-2 text-gd-yellow"></i>
+                            Diggi Road, Jaipur
+                        </p>
+                        <div class="mt-auto">
+                            <div class="inline-block bg-gd-yellow px-4 py-2 rounded-lg font-bold text-gd-blue shadow-sm mb-5">
+                                ₹19,950 / guz
+                            </div>
+                            <button class="w-full bg-gd-blue text-white py-3 rounded-xl font-semibold hover:bg-slate-800 transition-colors flex justify-center items-center gap-2">
+                                More Details <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gd-blue mb-4">Management <span class="text-gd-yellow">Team</span></h2>
+                <div class="h-1 w-20 bg-gd-yellow mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">The dedicated professionals driving our success</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+                
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-32 h-32 mx-auto rounded-full p-1 border-4 border-gd-yellow/30 mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Anushka Sharma" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <h3 class="text-xl font-bold text-gd-blue mb-1">Anushka Sharma</h3>
+                    <p class="text-gd-yellow font-semibold text-sm mb-4 uppercase tracking-wide">HR Executive</p>
+                    <p class="text-slate-500 text-sm">Handles recruitment, employee engagement, HR policies & organizational coordination.</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-32 h-32 mx-auto rounded-full p-1 border-4 border-gd-yellow/30 mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Hemant Tyagi" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <h3 class="text-xl font-bold text-gd-blue mb-1">Hemant Tyagi</h3>
+                    <p class="text-gd-yellow font-semibold text-sm mb-4 uppercase tracking-wide">Sr. Sales Manager</p>
+                    <p class="text-slate-500 text-sm">Leads sales operations & investor relations with strategic planning and market analysis.</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md border border-slate-100 text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-32 h-32 mx-auto rounded-full p-1 border-4 border-gd-yellow/30 mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Manish Choudhary" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <h3 class="text-xl font-bold text-gd-blue mb-1">Manish Choudhary</h3>
+                    <p class="text-gd-yellow font-semibold text-sm mb-4 uppercase tracking-wide">Sr. Sales Manager</p>
+                    <p class="text-slate-500 text-sm">Leads sales teams, builds client relationships & ensures consistent revenue growth.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gd-blue mb-4">Real Estate <span class="text-gd-yellow">Knowledge Hub</span></h2>
+                <div class="h-1 w-20 bg-gd-yellow mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">Smart guides on property investment, JDA & RERA explained simply</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Card 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:border-gd-yellow transition-colors">
+                    <h3 class="text-xl font-bold text-gd-blue mb-4">What is JDA?</h3>
+                    <p class="text-slate-600 mb-6">Understand what JDA (Jaipur Development Authority) approval is and why it is crucial for a secure property purchase in Jaipur.</p>
+                    <a href="#" class="text-gd-yellow font-semibold hover:text-yellow-600 flex items-center">
+                        Read More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:border-gd-yellow transition-colors">
+                    <h3 class="text-xl font-bold text-gd-blue mb-4">What is RERA?</h3>
+                    <p class="text-slate-600 mb-6">Learn the role of the Real Estate (Regulation and Development) Act and how it acts as a shield for buyer protection.</p>
+                    <a href="#" class="text-gd-yellow font-semibold hover:text-yellow-600 flex items-center">
+                        Read More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:border-gd-yellow transition-colors">
+                    <h3 class="text-xl font-bold text-gd-blue mb-4">JDA and RERA – Safe Investment Guide</h3>
+                    <p class="text-slate-600 mb-6">Why both JDA and RERA approvals are necessary for ensuring a 100% safe property investment and future appreciation.</p>
+                    <a href="#" class="text-gd-yellow font-semibold hover:text-yellow-600 flex items-center">
+                        Read More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gd-blue mb-4">Contact <span class="text-gd-yellow">Girisha Dham Group</span></h2>
+                <div class="h-1 w-20 bg-gd-yellow mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">Your trusted partner for premium real estate investments</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                
+                <!-- Address -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gd-yellow/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-location-dot text-2xl text-gd-yellow"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gd-blue mb-3">Office Address</h3>
+                    <p class="text-slate-600">
+                        B-181, Vidhan Sabha Nagar,<br>
+                        200 FT Road, Patrakar Colony,<br>
+                        Mansarovar, Jaipur
+                    </p>
+                </div>
+
+                <!-- Phone -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gd-yellow/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-phone text-2xl text-gd-yellow"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gd-blue mb-3">Call Us</h3>
+                    <p class="text-slate-600 text-lg font-medium">
+                        <a href="tel:+917732888555" class="hover:text-gd-yellow transition-colors">+91 77328 88555</a>
+                    </p>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gd-yellow/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-envelope text-2xl text-gd-yellow"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gd-blue mb-3">Email Us</h3>
+                    <p class="text-slate-600 font-medium break-all">
+                        <a href="mailto:info@girishadhamgroup.com" class="hover:text-gd-yellow transition-colors">info@girishadhamgroup.com</a>
+                    </p>
+                </div>
+
+            </div>
+            
+            <!-- Quick Inquiry CTA -->
+            <div class="bg-gd-blue rounded-3xl p-10 text-center relative overflow-hidden shadow-xl">
+                <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-white/5 blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-gd-yellow/10 blur-3xl"></div>
+                
+                <h3 class="text-3xl font-bold text-white mb-4 relative z-10">Ready to find your dream property?</h3>
+                <p class="text-slate-300 mb-8 max-w-2xl mx-auto relative z-10">Get in touch with our experts today for detailed project brochures, site visits, and personalized investment advice.</p>
+                <a href="https://wa.me/917732888555" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-gd-yellow text-gd-blue font-bold rounded-full hover:bg-yellow-500 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 relative z-10 text-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl mr-2"></i> Message on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Brand -->
+            <div>
+                <div class="text-2xl font-bold text-white tracking-tighter flex items-center mb-4">
+                    <i class="fa-solid fa-house-chimney text-white mr-2"></i>
+                    G<span class="text-gd-yellow">D</span> Group
+                </div>
+                <p class="text-sm mb-6 max-w-xs">Your trusted partner for JDA & RERA approved premium residential plots in Jaipur.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gd-yellow hover:text-gd-blue transition-colors">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gd-yellow hover:text-gd-blue transition-colors">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gd-yellow hover:text-gd-blue transition-colors">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white font-semibold text-lg mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-gd-yellow transition-colors text-sm">Home</a></li>
+                    <li><a href="#about" class="hover:text-gd-yellow transition-colors text-sm">About Us</a></li>
+                    <li><a href="#projects" class="hover:text-gd-yellow transition-colors text-sm">Projects</a></li>
+                    <li><a href="#team" class="hover:text-gd-yellow transition-colors text-sm">Our Team</a></li>
+                    <li><a href="#contact" class="hover:text-gd-yellow transition-colors text-sm">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Legal -->
+            <div>
+                <h4 class="text-white font-semibold text-lg mb-4">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-gd-yellow transition-colors text-sm">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-gd-yellow transition-colors text-sm">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:text-gd-yellow transition-colors text-sm">RERA Disclaimers</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-sm">
+            <p>&copy; 2026 Girisha Dham Group. All Rights Reserved. Designed for a Major Project.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917732888555" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-2 hover:bg-[#20bd5a] transition-all transform hover:scale-105 group border-2 border-white">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="font-bold hidden sm:inline-block group-hover:inline-block">Chat with Us</span>
+    </a>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // Navbar visual state on scroll
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    header.classList.add('shadow-md');
+                    header.classList.remove('shadow-sm');
+                } else {
+                    header.classList.add('shadow-sm');
+                    header.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
